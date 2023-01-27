@@ -1,7 +1,7 @@
-import { Schema, model } from 'mongoose'
+const mongoose = require('mongoose')
 
 
-const MoviesSchema = Schema({
+const MoviesSchema = new mongoose.Schema({
     title: {
         type: String,
         required: true
@@ -15,4 +15,5 @@ const MoviesSchema = Schema({
 
 })
 
-export default model('MoviesSchema', MoviesSchema)
+module.exports = mongoose.model('MoviesSchema', MoviesSchema)
+

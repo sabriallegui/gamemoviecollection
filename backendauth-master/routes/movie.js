@@ -17,7 +17,7 @@ movieRouter.delete('/:id', deletmovie)
 
 movieRouter.post('/', Addmovie)
 
-//put route 
+//put route
 
 
 movieRouter.put('/:id', Updatemovie)

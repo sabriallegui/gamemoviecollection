@@ -11,16 +11,16 @@ exports.register = async (req, res) => {
         const { name, email, password } = req.body
         const found = await UserSchema.findOne({ email })
         if (found) { return res.json({ msg: 'vous avez deja un compte , bara logi ' }) }
-        const newUser = await new UserSchema(req.body)
+        const newUser = new UserSchema(req.body)
         const saltRounds = 10
         const salt = bcrypt.genSaltSync(saltRounds);
         const hash = bcrypt.hashSync(password, salt);
         newUser.password = hash
         newUser.save()
-        res.json({ msg: 'welcome to the groupe', newUser })
+        res.json({ msg: 'welcome to the group', newUser })
     } catch (err) {
         console.log(err)
-        res.json({ msg: 'you have something wrong with ur register' })
+        res.json({ msg: 'you have something wrong with ur registrations' })
     }
 }
 
@@ -59,6 +59,7 @@ exports.getAll = async (req, res) => {
     try {
         const all = await UserSchema.find()
         res.send(all)
+        console.log(all)
     } catch (err) {
         console.log(err)
     }

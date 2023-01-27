@@ -1,5 +1,4 @@
-const moviesSchema = require('../model/movie').default;
-
+const moviesSchema = require('../model/movie');
 exports.Getmovie = async (req, res) => {
     try {
         const movies = await moviesSchema.find()

@@ -25,10 +25,12 @@ const Admin = ({ auth }) => {
   console.log('listet el db users', users)
   return (
     <div>
-
-
+      {
+        users.map((e) => (<Cards user={e} />))
+      }
     </div>
   )
+
 }
 
 export default Admin
