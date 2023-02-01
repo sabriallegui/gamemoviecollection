@@ -5,7 +5,7 @@ const Cards = ({ user }) => {
   return (
     <div>
       {
-        <><hr /> <p>users</p>   <ul class="tilesWrap">
+        <><hr /> <p>users</p>   <ul className="tilesWrap">
           <li>
 
             <h3>{user.name}</h3>

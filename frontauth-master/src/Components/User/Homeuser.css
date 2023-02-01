@@ -1,18 +1,3 @@
-.body {
-    height: 100%;
-    overflow: hidden;
-
-    background-size: cover;
-    position: fixed;
-    padding: 0px;
-    margin: 0px;
-    width: 100%;
-    height: 100%;
-    font: normal 14px/1.618em "Roboto", sans-serif;
-    -webkit-font-smoothing: antialiased;
-}
-
-
 h1,
 h2 {
     font-weight: 500;

@@ -8,14 +8,16 @@ import Admin from './Components/Admin/Admin';
 
 import AddCardForm from './Components/addCardForm/AddCardForm';
 import GamingUser from './Components/GamingUser/GamingUser';
+import User from './Components/User/User';
 function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path='/' element={<Register />} />
+        <Route path='/register' element={<Register />} />
         <Route path='/login' element={<Login />} />
-        <Route path='/home' element={<PrivateRoute />} />
+        <Route path='/' element={<PrivateRoute />} />
         <Route path='/app/Private' element={<Admin />} />
+        <Route path='/app/User' element={<User />} />
         <Route path='/app/details' element={<Updateuser />} />
         <Route path='/app/movie' element={<Movieuser />} />
         <Route path='/user/movieadd' element={<AddCardForm />} />

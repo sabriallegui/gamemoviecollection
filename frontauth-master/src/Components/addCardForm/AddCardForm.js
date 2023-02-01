@@ -21,7 +21,7 @@ function AddCardForm() {
     }
     return (
         <div>
-            <div classNameName="formbold-main-wrapper">
+            <div className="formbold-main-wrapper">
 
                 <div className="formbold-form-wrapper">
 
@@ -50,7 +50,7 @@ function AddCardForm() {
                                 />
                             </div>
                             <div>
-                                <label for="lastname" className="formbold-form-label"> good /bad  </label>
+                                <label className="formbold-form-label"> good /bad  </label>
                                 <input
                                     type="text"
                                     name="lastname"
@@ -88,7 +88,7 @@ function AddCardForm() {
                         </div>
 
                         <div className="formbold-mb-3">
-                            <label for="address" className="formbold-form-label">
+                            <label className="formbold-form-label">
                                 Movie description
                             </label>
                             <input
@@ -105,7 +105,7 @@ function AddCardForm() {
 
 
                         <div className="formbold-mb-3">
-                            <label for="address" className="formbold-form-label">
+                            <label className="formbold-form-label">
                                 Movie image
                             </label>
                             <input

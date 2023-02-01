@@ -40,6 +40,7 @@ const PrivateRoute = () => {
 
   const token = localStorage.getItem('token')
   console.log('token el user specifique ', token)
+  console.log("auth", auth)
 
   return (
 

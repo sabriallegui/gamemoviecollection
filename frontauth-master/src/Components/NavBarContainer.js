@@ -2,7 +2,7 @@ import React from 'react'
 import './navbar.css'
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import { Link } from "react-router-dom"
 const NavBarContainer = ({ auth, logout }) => {
   console.log('lina nav account auth ', auth)
   return (
@@ -10,21 +10,26 @@ const NavBarContainer = ({ auth, logout }) => {
 
 
 
-      <nav class="navMenu">
+      <nav className="navMenu">
 
         {auth.role === 'admin' ? (<>
-          <a href="#">Home</a>
+          <h2>{auth.name}</h2>
+          <Link to="/">Home</Link>
 
-          <a href="#">Work</a>
+          <Link >eyes</Link>
 
         </>) : (<>
-          <a href="#">Home</a>
-          <a href="#">my list</a>
-          <a href="#">About</a>
+          <h2>{auth.name}</h2>
+          <Link to="/">Home</Link>
+          <Link to="/app/movie">Movie</Link>
+          <Link to="/user/gameadd">Game</Link>
+
+
+
         </>)}
 
 
-        <Button variant="outline-secondary" onClick={() => logout()}>Logout</Button>
+        <Button variant="outline-secondary" type="button" onClick={() => logout()}>Logout</Button>
 
 
       </nav>

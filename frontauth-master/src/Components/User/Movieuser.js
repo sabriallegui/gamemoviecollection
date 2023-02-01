@@ -1,7 +1,9 @@
 import { React, useEffect } from 'react';
 import { useDispatch, useSelector } from "react-redux"
 import { deleteMovie, fetchMovie } from '../../api/movie';
+import { fetchGames } from '../../api/game';
 import { setmovies } from '../../store/movieSlice';
+import { setGames } from '../../store/gameSlice';
 import CardMovie from './CardMovie';
 import WhatsNew from './WhatsNew';
 
@@ -13,6 +15,7 @@ const Movieuser = () => {
         let result = await deleteMovie(id)
         console.log("deleted result", result);
         dispatch(deleteMovie(id))
+
     }
 
     const getMovies = async () => {
@@ -24,6 +27,35 @@ const Movieuser = () => {
     useEffect(() => {
         getMovies();
     }, [])
+
+    // ddfvgbhjdfghsdfghjksdfghjsdfghfh
+
+
+    const game = useSelector(state => state.gamescolllection)
+    console.log(game, "gamee message 23456345678")
+    // const handleDeletxe = async (id) => {
+    //     let result = await deleteMovie(id)
+    //     console.log("deleted result", result);
+    //     dispatch(deleteMovie(id))
+
+    // }
+
+    // const getGames = async () => {
+    //     const datam = await fetchGames()
+    //     dispatch(setGames(datam))
+    //     console.log("Gaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaame", datam)
+
+    // }
+    // useEffect(() => {
+    //     getGames();
+    // }, [])
+
+
+
+
+
+
+
 
     return (
         <div>
@@ -39,7 +71,6 @@ const Movieuser = () => {
             </div>
 
             <h2><strong>What's new?</strong></h2>
-            {/* {Movies.map((e) => <WhatsNew el={e} />)} */}
 
 
         </div>

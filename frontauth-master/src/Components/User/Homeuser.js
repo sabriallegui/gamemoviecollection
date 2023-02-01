@@ -19,11 +19,11 @@ const Homeuser = ({ auth }) => {
     };
     return (
         <div className='body'>
-            <aside class="profile-card">
+            <aside className="profile-card">
                 <header>
                     {/* <!-- here’s the avatar --> */}
                     <a target="_blank" href="#">
-                        <img src="http://lorempixel.com/150/150/people/" class="hoverZoomLink" />
+                        <img src="http://lorempixel.com/150/150/people/" className="hoverZoomLink" />
                     </a>
 
                     {/* <!-- the username --> */}
@@ -38,17 +38,13 @@ const Homeuser = ({ auth }) => {
                 </header>
 
                 {/* <!-- bit of a bio; who are you? --> */}
-                <div class="profile-bio">
+                <div className="profile-bio">
 
                     <p>
                         It takes monumental improvement for us to change how we live our lives. Design is the way we access that improvement.
                     </p>
 
                 </div>
-
-                <button className='button' onClick={() => handlemoviesform()}>Add a new Movie</button>
-                <button className='button' onClick={() => handlegamesform()}>Add a new Game</button>
-                <button className='button' onClick={() => handelmovie()}>movies</button>
             </aside>
         </div>
     )

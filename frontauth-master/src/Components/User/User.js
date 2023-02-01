@@ -18,7 +18,7 @@ const User = ({ auth }) => {
             <div className="text-center mt-3">
               <span className="bg-secondary p-1 px-4 rounded text-white">Pro</span>
               <h5 className="mt-2 mb-0">{auth.name}</h5>
-              <span>UI/UX Designer</span> <br />
+              <span>{auth.role}</span> <br />
               <h4>email</h4>
               <span>{auth.email}</span>
               <div class="px-4 mt-1">

@@ -22,7 +22,7 @@ const Admin = ({ auth }) => {
     getAllusers()
   }, [])
 
-  console.log('listet el db users', users)
+  console.log('listet el db users111111111111111111111111', users)
   return (
     <div>
       {
